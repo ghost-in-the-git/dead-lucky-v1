@@ -438,16 +438,11 @@ img {
 .visual-dice {
     display: flex;
     gap: var(--spacing-lg);
-    perspective: 1000px;
+    align-items: center;
+    justify-content: center;
 }
 
 .dice {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-xs);
     animation: diceFloat 3s ease-in-out infinite;
 }
 
@@ -455,48 +450,20 @@ img {
 .dice:nth-child(3) { animation-delay: -2s; }
 
 @keyframes diceFloat {
-    0%, 100% { transform: translateY(0) rotateX(0); }
-    50% { transform: translateY(-10px) rotateX(5deg); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
-.dice-face {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--color-bg-card), var(--color-bg-tertiary));
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--shadow-lg);
-    border: 2px solid rgba(255, 255, 255, 0.1);
+.dice-image {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+    transition: transform var(--transition-normal), filter var(--transition-normal);
 }
 
-.dice-1 .dice-face {
-    border-color: var(--color-accent-primary);
-    box-shadow: 0 0 20px rgba(255, 71, 87, 0.3);
-}
-
-.dice-2 .dice-face {
-    border-color: #4da6ff;
-    box-shadow: 0 0 20px rgba(77, 166, 255, 0.3);
-}
-
-.dice-3 .dice-face {
-    border-color: var(--color-accent-secondary);
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-}
-
-.dice-value {
-    font-family: var(--font-display);
-    font-size: 2.5rem;
-    font-weight: 900;
-}
-
-.dice-trait {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    color: var(--color-text-secondary);
+.dice:hover .dice-image {
+    transform: scale(1.1);
+    filter: drop-shadow(0 15px 30px rgba(255, 71, 87, 0.3));
 }
 
 /* Banner 3: Ranking */
@@ -1064,18 +1031,8 @@ img {
         height: 50px;
     }
 
-    .dice {
+    .dice-image {
         width: 80px;
-        height: 80px;
-    }
-
-    .dice-face {
-        width: 60px;
-        height: 60px;
-    }
-
-    .dice-value {
-        font-size: 1.75rem;
     }
 }
 
