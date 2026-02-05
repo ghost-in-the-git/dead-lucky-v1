@@ -547,7 +547,7 @@ img {
 }
 
 .summon-portal {
-    position: relative;
+    position: center;
     width: 280px;
     height: 280px;
     display: flex;
