@@ -543,91 +543,47 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-lg);
+    justify-content: center;
 }
 
 .summon-portal {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.portal-ring {
+.summon-layer {
     position: absolute;
-    border-radius: 50%;
-    border: 2px solid;
-    animation: portalSpin 10s linear infinite;
-}
-
-.ring-1 {
     width: 100%;
     height: 100%;
-    border-color: var(--color-accent-primary);
-    opacity: 0.5;
+    object-fit: contain;
 }
 
-.ring-2 {
-    width: 75%;
-    height: 75%;
-    border-color: var(--color-accent-tertiary);
-    animation-direction: reverse;
-    animation-duration: 8s;
+.summon-outside {
+    animation: summonRotate 20s linear infinite;
+    filter: drop-shadow(0 0 20px rgba(124, 92, 224, 0.4));
 }
 
-.ring-3 {
-    width: 50%;
-    height: 50%;
-    border-color: var(--color-accent-secondary);
-    animation-duration: 6s;
+.summon-inside {
+    animation: summonRotate 12s linear infinite;
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.3));
 }
 
-@keyframes portalSpin {
+@keyframes summonRotate {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
 
-.portal-core {
-    width: 60px;
-    height: 60px;
-    background: radial-gradient(circle, var(--color-accent-tertiary), var(--color-bg-primary));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 900;
-    animation: corePulse 2s ease-in-out infinite;
+.summon-portal:hover .summon-outside {
+    filter: drop-shadow(0 0 30px rgba(124, 92, 224, 0.6));
 }
 
-@keyframes corePulse {
-    0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(124, 92, 224, 0.5); }
-    50% { transform: scale(1.1); box-shadow: 0 0 40px rgba(124, 92, 224, 0.8); }
+.summon-portal:hover .summon-inside {
+    filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.5));
 }
-
-.rarity-indicators {
-    display: flex;
-    gap: var(--spacing-sm);
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.rarity {
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--radius-full);
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.rarity.common { background: var(--color-rarity-common); color: #fff; }
-.rarity.rare { background: var(--color-rarity-rare); color: #fff; }
-.rarity.epic { background: var(--color-rarity-epic); color: #fff; }
-.rarity.legendary { background: var(--color-rarity-legendary); color: #000; }
 
 /* Banner 5: Daily */
 .visual-daily {
