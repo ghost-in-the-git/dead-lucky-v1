@@ -388,8 +388,6 @@ img {
     height: 280px;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    background: var(--color-bg-card);
 }
 
 .example-image {
