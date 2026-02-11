@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initDailyTimer();
     initSmoothScroll();
     initHeaderScroll();
+    initMultiplierSelector();
 });
 
 /**
@@ -252,6 +253,43 @@ function initHeaderScroll() {
         }
 
         lastScroll = currentScroll;
+    });
+}
+
+/**
+ * Multiplier Selector for Strategy Section
+ */
+function initMultiplierSelector() {
+    const cards = document.querySelectorAll('.multiplier-card');
+    const examples = document.querySelectorAll('.example-image');
+
+    if (!cards.length || !examples.length) return;
+
+    function showExample(target) {
+        // Remove active from all cards and examples
+        cards.forEach(card => card.classList.remove('active'));
+        examples.forEach(example => example.classList.remove('active'));
+
+        // Add active to matching card and example
+        const activeCard = document.querySelector(`.multiplier-card[data-target="${target}"]`);
+        const activeExample = document.querySelector(`.example-image[data-example="${target}"]`);
+
+        if (activeCard) activeCard.classList.add('active');
+        if (activeExample) activeExample.classList.add('active');
+    }
+
+    cards.forEach(card => {
+        // Handle hover
+        card.addEventListener('mouseenter', function() {
+            const target = this.dataset.target;
+            showExample(target);
+        });
+
+        // Handle click for mobile
+        card.addEventListener('click', function() {
+            const target = this.dataset.target;
+            showExample(target);
+        });
     });
 }
 
