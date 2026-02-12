@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Buy Dead Lucky - Official products and merchandise">
+    <title>Buy | Dead Lucky</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Jersey+25&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/DEAD_LUCKY_LOGO_LONG.png" alt="Dead Lucky" class="logo-image">
+            </a>
+            <nav class="nav-buttons">
+                <a href="index.html" class="btn btn-social">Home</a>
+                <a href="contact.html" class="btn btn-social">Contact</a>
+                <a href="#" class="btn btn-primary btn-play">
+                    <span>PLAY NOW</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Buy</h1>
+                <p class="page-subtitle">Checkout is handled securely by Stripe</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <!-- TODO: Set STRIPE_SHOP_URL in the script below to your Stripe Payment Link URL (Dashboard → Payment links). Create one link that includes these products, or one link per product—then set productLinks in the script. -->
+                <ul class="product-list" style="list-style: none; display: flex; flex-direction: column; gap: var(--spacing-lg); max-width: 480px; margin: 0 auto;">
+                    <li style="background: var(--color-bg-card); border-radius: var(--radius-md); padding: var(--spacing-md);">
+                        <a href="#" class="btn btn-primary product-link" style="display: block; text-align: center; padding: var(--spacing-md) var(--spacing-lg);" data-product-id="prod_Ty4xX7WczhrXzY" target="_blank" rel="noopener noreferrer">
+                            3000 Dead Lucky Chips (+1000 Bonus)
+                        </a>
+                        <p style="margin-top: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-secondary);">This gives you 4000 Dead Lucky Chips</p>
+                    </li>
+                    <li style="background: var(--color-bg-card); border-radius: var(--radius-md); padding: var(--spacing-md);">
+                        <a href="#" class="btn btn-primary product-link" style="display: block; text-align: center; padding: var(--spacing-md) var(--spacing-lg);" data-product-id="prod_Ty4wL73PuyDH4j" target="_blank" rel="noopener noreferrer">
+                            1000 Dead Lucky Chips (+300 Bonus)
+                        </a>
+                        <p style="margin-top: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-secondary);">This gives you 1300 Dead Lucky Chips</p>
+                    </li>
+                    <li style="background: var(--color-bg-card); border-radius: var(--radius-md); padding: var(--spacing-md);">
+                        <a href="#" class="btn btn-primary product-link" style="display: block; text-align: center; padding: var(--spacing-md) var(--spacing-lg);" data-product-id="prod_Ty4vUFzQkQL2vy" target="_blank" rel="noopener noreferrer">
+                            500 Dead Lucky Chips (+100 Bonus)
+                        </a>
+                        <p style="margin-top: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-secondary);">This gives you 600 Dead Lucky Chips</p>
+                    </li>
+                    <li style="background: var(--color-bg-card); border-radius: var(--radius-md); padding: var(--spacing-md);">
+                        <a href="#" class="btn btn-primary product-link" style="display: block; text-align: center; padding: var(--spacing-md) var(--spacing-lg);" data-product-id="prod_Ty4tf5AZ7UW29u" target="_blank" rel="noopener noreferrer">
+                            100 Dead Lucky Chips
+                        </a>
+                        <p style="margin-top: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-secondary);">Placeholder description text</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">DEAD LUCKY</span>
+            </div>
+            <nav class="footer-nav">
+                <a href="legal.html">Legal Disclaimer</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <p class="footer-copyright">&copy; 2025 Dead Lucky. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // TODO: Set to your Stripe Payment Link URL from Dashboard → Payment links (e.g. https://buy.stripe.com/...). Use one link that includes all 4 products, or set each productLinks entry to a different payment link URL.
+        var STRIPE_SHOP_URL = '#';
+        var productLinks = {
+            'prod_Ty4xX7WczhrXzY': 'https://buy.stripe.com/eVq5kEf0pbN837C4mLao803',
+            'prod_Ty4wL73PuyDH4j': 'https://buy.stripe.com/5kQ9AU9G5aJ40Zu06vao802',
+            'prod_Ty4vUFzQkQL2vy': 'https://buy.stripe.com/bJeeVedWl04qfUodXlao801',
+            'prod_Ty4tf5AZ7UW29u': 'https://buy.stripe.com/14AeVedWl18u5fK4mLao800'
+        };
+        document.querySelectorAll('.product-link[data-product-id]').forEach(function (a) {
+            a.href = productLinks[a.getAttribute('data-product-id')] || STRIPE_SHOP_URL;
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
