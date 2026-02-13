@@ -640,9 +640,10 @@ img {
 
 .daily-display {
     position: relative;
-    width: 100%;
-    max-width: 500px;
-    aspect-ratio: 16/9;
+    width: 350px;
+    height: 280px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
 }
 
 .daily-image {
