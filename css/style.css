@@ -638,6 +638,28 @@ img {
     gap: var(--spacing-lg);
 }
 
+.daily-display {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 16/9;
+}
+
+.daily-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.daily-image.active {
+    opacity: 1;
+}
+
 .clock-container {
     display: flex;
     flex-direction: column;

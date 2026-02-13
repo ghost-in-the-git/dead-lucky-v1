@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initHeaderScroll();
     initMultiplierSelector();
     initDiceSetCycler();
+    initDailyImageCycler();
 });
 
 /**
@@ -363,3 +364,28 @@ function initPortalAnimation() {
 
 // Initialize portal animation
 document.addEventListener('DOMContentLoaded', initPortalAnimation);
+
+/**
+ * Auto-cycling Daily Images for Section 3
+ */
+function initDailyImageCycler() {
+    const dailyImages = document.querySelectorAll('.daily-image');
+
+    if (!dailyImages.length) return;
+
+    let currentIndex = 0;
+
+    function cycleDailyImages() {
+        // Remove active from all images
+        dailyImages.forEach(img => img.classList.remove('active'));
+
+        // Add active to current image
+        dailyImages[currentIndex].classList.add('active');
+
+        // Move to next index (loop back to 0)
+        currentIndex = (currentIndex + 1) % dailyImages.length;
+    }
+
+    // Start cycling every 2 seconds
+    setInterval(cycleDailyImages, 2000);
+}
