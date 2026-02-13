@@ -445,10 +445,26 @@ img {
 
 /* Banner 2: Dice */
 .visual-dice {
+    position: relative;
     display: flex;
     gap: var(--spacing-lg);
     align-items: center;
     justify-content: center;
+}
+
+.dice-set {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.dice-set.active {
+    position: relative;
+    opacity: 1;
 }
 
 .dice {

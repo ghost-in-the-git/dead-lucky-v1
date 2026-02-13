@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initHeaderScroll();
     initMultiplierSelector();
+    initDiceSetCycler();
 });
 
 /**
@@ -279,6 +280,31 @@ function initMultiplierSelector() {
 
     // Start cycling every 1 second
     setInterval(cycleExamples, 1000);
+}
+
+/**
+ * Auto-cycling Dice Sets for Deck Building Section
+ */
+function initDiceSetCycler() {
+    const diceSets = document.querySelectorAll('.dice-set');
+
+    if (diceSets.length < 2) return;
+
+    let currentSet = 0;
+
+    function cycleDiceSets() {
+        // Remove active from all sets
+        diceSets.forEach(set => set.classList.remove('active'));
+
+        // Add active to current set
+        diceSets[currentSet].classList.add('active');
+
+        // Move to next set (loop back to 0)
+        currentSet = (currentSet + 1) % diceSets.length;
+    }
+
+    // Start cycling every 1 second
+    setInterval(cycleDiceSets, 1000);
 }
 
 /**
