@@ -320,6 +320,10 @@ img {
     padding: var(--spacing-2xl) 0;
     position: relative;
     overflow: hidden;
+    background-image: url('../images/DEAD_LUCKY_BACKGROUNDS_WEB.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .banner:nth-child(even) {
@@ -577,13 +581,6 @@ img {
 }
 
 /* Banner 4: Gacha */
-.banner-gacha {
-    background-image: url('../images/DEAD_LUCKY_BACKGROUNDS_WEB.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 .visual-gacha {
     display: flex;
     flex-direction: column;
