@@ -283,28 +283,30 @@ function initMultiplierSelector() {
 }
 
 /**
- * Auto-cycling Dice Sets for Deck Building Section
+ * Auto-cycling Dice Slots for Deck Building Section (sequential left to right)
  */
 function initDiceSetCycler() {
-    const diceSets = document.querySelectorAll('.dice-set');
+    const diceSlots = document.querySelectorAll('.dice-slot');
 
-    if (diceSets.length < 2) return;
+    if (!diceSlots.length) return;
 
-    let currentSet = 0;
+    let currentSlot = 0;
 
-    function cycleDiceSets() {
-        // Remove active from all sets
-        diceSets.forEach(set => set.classList.remove('active'));
+    function cycleNextSlot() {
+        const slot = diceSlots[currentSlot];
+        const options = slot.querySelectorAll('.dice-option');
 
-        // Add active to current set
-        diceSets[currentSet].classList.add('active');
+        if (options.length < 2) return;
 
-        // Move to next set (loop back to 0)
-        currentSet = (currentSet + 1) % diceSets.length;
+        // Toggle active between options
+        options.forEach(option => option.classList.toggle('active'));
+
+        // Move to next slot (loop back to 0)
+        currentSlot = (currentSlot + 1) % diceSlots.length;
     }
 
-    // Start cycling every 1 second
-    setInterval(cycleDiceSets, 1000);
+    // Start cycling every 1 second, one slot at a time
+    setInterval(cycleNextSlot, 1000);
 }
 
 /**
