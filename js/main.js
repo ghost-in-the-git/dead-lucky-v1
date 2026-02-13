@@ -278,8 +278,8 @@ function initMultiplierSelector() {
         currentIndex = (currentIndex + 1) % examples.length;
     }
 
-    // Start cycling every 1 second
-    setInterval(cycleExamples, 1000);
+    // Start cycling every 2 seconds
+    setInterval(cycleExamples, 2000);
 }
 
 /**
@@ -305,8 +305,8 @@ function initDiceSetCycler() {
         currentSlot = (currentSlot + 1) % diceSlots.length;
     }
 
-    // Start cycling every 1 second, one slot at a time
-    setInterval(cycleNextSlot, 1000);
+    // Start cycling every 2 seconds, one slot at a time
+    setInterval(cycleNextSlot, 2000);
 }
 
 /**
