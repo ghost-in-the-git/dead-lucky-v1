@@ -257,40 +257,28 @@ function initHeaderScroll() {
 }
 
 /**
- * Multiplier Selector for Strategy Section
+ * Auto-cycling Example Images for Strategy Section
  */
 function initMultiplierSelector() {
-    const cards = document.querySelectorAll('.multiplier-card');
     const examples = document.querySelectorAll('.example-image');
 
-    if (!cards.length || !examples.length) return;
+    if (!examples.length) return;
 
-    function showExample(target) {
-        // Remove active from all cards and examples
-        cards.forEach(card => card.classList.remove('active'));
+    let currentIndex = 0;
+
+    function cycleExamples() {
+        // Remove active from all examples
         examples.forEach(example => example.classList.remove('active'));
 
-        // Add active to matching card and example
-        const activeCard = document.querySelector(`.multiplier-card[data-target="${target}"]`);
-        const activeExample = document.querySelector(`.example-image[data-example="${target}"]`);
+        // Add active to current example
+        examples[currentIndex].classList.add('active');
 
-        if (activeCard) activeCard.classList.add('active');
-        if (activeExample) activeExample.classList.add('active');
+        // Move to next index (loop back to 0)
+        currentIndex = (currentIndex + 1) % examples.length;
     }
 
-    cards.forEach(card => {
-        // Handle hover
-        card.addEventListener('mouseenter', function() {
-            const target = this.dataset.target;
-            showExample(target);
-        });
-
-        // Handle click for mobile
-        card.addEventListener('click', function() {
-            const target = this.dataset.target;
-            showExample(target);
-        });
-    });
+    // Start cycling every 1 second
+    setInterval(cycleExamples, 1000);
 }
 
 /**
