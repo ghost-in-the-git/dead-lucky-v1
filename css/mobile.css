@@ -1,0 +1,377 @@
+/**
+ * Dead Lucky - Mobile Styles
+ * For screens 1000px and below
+ */
+
+/* CSS Variables */
+:root {
+    --color-bg-primary: #0a0a0f;
+    --color-bg-secondary: #12121a;
+    --color-bg-card: #1a1a25;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #a0a0b0;
+    --color-text-muted: #606070;
+    --color-accent-primary: #ff4757;
+    --color-accent-secondary: #ffd700;
+    --color-accent-tertiary: #7c5ce0;
+    --font-display: 'Jersey 25', cursive;
+    --font-body: 'Inter', sans-serif;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 var(--spacing-md);
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: var(--spacing-sm) 0;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-image {
+    height: 20px;
+    width: auto;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-accent-primary), #ff6b7a);
+    color: var(--color-text-primary);
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+}
+
+.btn-social {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    background: var(--color-bg-card);
+    color: var(--color-text-primary);
+    border-radius: 50%;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 60px;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+}
+
+.hero-logo-gif {
+    max-width: 90%;
+    height: auto;
+    max-height: 200px;
+}
+
+/* Banner Sections */
+.banner {
+    padding: var(--spacing-xl) 0;
+    background-image: url('../images/DEAD_LUCKY_BACKGROUNDS_WEB.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    text-align: center;
+}
+
+.banner-number {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--color-accent-primary);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+.banner-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.banner-description {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.banner-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Example Display (Strategy Section) */
+.example-display {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    height: 280px;
+}
+
+.example-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.example-image.active {
+    opacity: 1;
+}
+
+/* Daily Display */
+.daily-display {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    height: 280px;
+}
+
+.daily-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.daily-image.active {
+    opacity: 1;
+}
+
+/* Dice Section */
+.visual-dice {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.dice {
+    position: relative;
+    width: 80px;
+    height: 100px;
+}
+
+.dice-option {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.dice-option.active {
+    opacity: 1;
+}
+
+.dice-image {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.dice-label {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+}
+
+/* Gacha Section */
+.visual-gacha {
+    display: flex;
+    justify-content: center;
+}
+
+.summon-portal {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.summon-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.summon-outside {
+    animation: rotatePortal 20s linear infinite;
+}
+
+.summon-inside {
+    animation: rotatePortal 15s linear infinite reverse;
+}
+
+@keyframes rotatePortal {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* CTA Section */
+.cta-content {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+}
+
+.cta-title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.cta-dead {
+    display: block;
+    color: var(--color-text-primary);
+}
+
+.cta-lucky {
+    display: block;
+    color: var(--color-accent-secondary);
+}
+
+.btn-play-cta {
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: 1.25rem;
+}
+
+/* Social Section */
+.social-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-bg-secondary);
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+/* Footer */
+.footer {
+    padding: var(--spacing-lg) 0;
+    background: var(--color-bg-primary);
+    border-top: 1px solid var(--color-bg-card);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-nav a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
