@@ -144,6 +144,22 @@ body {
     max-height: 200px;
 }
 
+/* Quote Section */
+.quote-section {
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+    background: var(--color-bg-secondary);
+}
+
+.quote-text {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+    padding: 0 var(--spacing-md);
+}
+
 /* Banner Sections */
 .banner {
     padding: var(--spacing-xl) 0;
