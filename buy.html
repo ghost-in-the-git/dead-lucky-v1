@@ -12,44 +12,20 @@
 </head>
 <body>
     <main>
-        <section class="page-header">
-            <div class="container">
-                <h1 class="page-title">Buy</h1>
-                <p class="page-subtitle">Checkout is handled securely by Stripe</p>
-            </div>
-        </section>
-
-        <section class="page-content">
-            <div class="container">
-                <!-- TODO: Set STRIPE_SHOP_URL in the script below to your Stripe Payment Link URL (Dashboard → Payment links). Create one link that includes these products, or one link per product—then set productLinks in the script. -->
-                <ul class="product-list" style="list-style: none; display: flex; flex-direction: column; gap: var(--spacing-lg); max-width: 480px; margin: 0 auto;">
-                    <li style="background: var(--color-bg-card); border-radius: var(--radius-md); padding: var(--spacing-md);">
-                        <a href="#" class="btn btn-primary product-link" style="display: block; text-align: center; padding: var(--spacing-md) var(--spacing-lg);" data-product-id="prod_Ty4xX7WczhrXzY" target="_blank" rel="noopener noreferrer">
-                            3000 Dead Lucky Chips (+1000 Bonus)
-                        </a>
-                        <p style="margin-top: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-secondary);">This gives you 4000 Dead Lucky Chips</p>
-                    </li>
-                    <li style="background: var(--color-bg-card); border-radius: var(--radius-md); padding: var(--spacing-md);">
-                        <a href="#" class="btn btn-primary product-link" style="display: block; text-align: center; padding: var(--spacing-md) var(--spacing-lg);" data-product-id="prod_Ty4wL73PuyDH4j" target="_blank" rel="noopener noreferrer">
-                            1000 Dead Lucky Chips (+300 Bonus)
-                        </a>
-                        <p style="margin-top: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-secondary);">This gives you 1300 Dead Lucky Chips</p>
-                    </li>
-                    <li style="background: var(--color-bg-card); border-radius: var(--radius-md); padding: var(--spacing-md);">
-                        <a href="#" class="btn btn-primary product-link" style="display: block; text-align: center; padding: var(--spacing-md) var(--spacing-lg);" data-product-id="prod_Ty4vUFzQkQL2vy" target="_blank" rel="noopener noreferrer">
-                            500 Dead Lucky Chips (+100 Bonus)
-                        </a>
-                        <p style="margin-top: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-secondary);">This gives you 600 Dead Lucky Chips</p>
-                    </li>
-                    <li style="background: var(--color-bg-card); border-radius: var(--radius-md); padding: var(--spacing-md);">
-                        <a href="#" class="btn btn-primary product-link" style="display: block; text-align: center; padding: var(--spacing-md) var(--spacing-lg);" data-product-id="prod_Ty4tf5AZ7UW29u" target="_blank" rel="noopener noreferrer">
-                            100 Dead Lucky Chips
-                        </a>
-                        <p style="margin-top: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-secondary);">Placeholder description text</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        <div class="container" style="display: flex; flex-direction: column; gap: var(--spacing-lg); max-width: 480px; margin: 0 auto; padding: var(--spacing-xl) 0;">
+            <a href="#" class="btn btn-primary product-link" style="display: block; text-align: center; padding: var(--spacing-md) var(--spacing-lg);" data-product-id="prod_Ty4xX7WczhrXzY" target="_blank" rel="noopener noreferrer">
+                3000 Dead Lucky Chips (+1000 Bonus)
+            </a>
+            <a href="#" class="btn btn-primary product-link" style="display: block; text-align: center; padding: var(--spacing-md) var(--spacing-lg);" data-product-id="prod_Ty4wL73PuyDH4j" target="_blank" rel="noopener noreferrer">
+                1000 Dead Lucky Chips (+300 Bonus)
+            </a>
+            <a href="#" class="btn btn-primary product-link" style="display: block; text-align: center; padding: var(--spacing-md) var(--spacing-lg);" data-product-id="prod_Ty4vUFzQkQL2vy" target="_blank" rel="noopener noreferrer">
+                500 Dead Lucky Chips (+100 Bonus)
+            </a>
+            <a href="#" class="btn btn-primary product-link" style="display: block; text-align: center; padding: var(--spacing-md) var(--spacing-lg);" data-product-id="prod_Ty4tf5AZ7UW29u" target="_blank" rel="noopener noreferrer">
+                100 Dead Lucky Chips
+            </a>
+        </div>
     </main>
 
     <script>
