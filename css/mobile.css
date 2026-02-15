@@ -287,6 +287,18 @@ body {
     position: relative;
     width: 80px;
     height: 100px;
+    animation: diceFloat 2s ease-in-out infinite;
+}
+
+.dice:nth-child(1) { animation-delay: 0s; }
+.dice:nth-child(2) { animation-delay: 0.3s; }
+.dice:nth-child(3) { animation-delay: 0.6s; }
+.dice:nth-child(4) { animation-delay: 0.9s; }
+.dice:nth-child(5) { animation-delay: 1.2s; }
+
+@keyframes diceFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 .dice-option {
