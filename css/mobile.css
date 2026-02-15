@@ -171,7 +171,10 @@ body {
 .quote-section {
     padding: var(--spacing-lg) 0;
     text-align: center;
-    background: var(--color-bg-secondary);
+    background-color: var(--color-bg-secondary);
+    background-image: url('../images/DEAD_LUCKY_BACKGROUNDS_WEB_QUOTE.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .quote-text {
