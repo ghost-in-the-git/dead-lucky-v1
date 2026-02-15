@@ -117,10 +117,11 @@ body {
     min-height: 60vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     position: relative;
     padding-top: 60px;
+    padding-bottom: 40px;
 }
 
 .hero-video {

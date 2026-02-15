@@ -224,9 +224,10 @@ img {
     position: relative;
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     overflow: hidden;
+    padding-bottom: 80px;
 }
 
 .hero-bg {
@@ -257,7 +258,7 @@ img {
 .hero-content {
     position: relative;
     text-align: center;
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-lg) 0;
 }
 
 .hero-title {
