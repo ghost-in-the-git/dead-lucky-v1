@@ -201,8 +201,8 @@ body {
 
 .banner-number {
     font-family: var(--font-display);
-    font-size: 13px;
-    line-height: 13px;
+    font-size: 24px;
+    line-height: 24px;
     color: var(--color-accent-primary);
     display: block;
     margin-bottom: var(--spacing-xs);
