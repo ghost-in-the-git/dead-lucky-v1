@@ -206,10 +206,6 @@ main {
     padding: var(--spacing-lg) 0;
     text-align: center;
     background-color: var(--color-bg-secondary);
-    background-image: url('../images/QUOTE_BG.png');
-    background-size: 100% auto;
-    background-position: center top;
-    background-repeat: no-repeat;
 }
 
 .quote-text {
