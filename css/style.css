@@ -218,6 +218,13 @@ img {
 }
 
 /* ========================================
+   Main Content
+   ======================================== */
+main {
+    padding-top: 98px; /* header (70px) + ticker (~28px) */
+}
+
+/* ========================================
    Hero Section
    ======================================== */
 .hero {
@@ -256,10 +263,15 @@ img {
 }
 
 .hero-ticker {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
     width: 100%;
     overflow: hidden;
     background: var(--color-bg-primary);
     padding: 8px 0;
+    z-index: 999;
 }
 
 .hero-ticker span {

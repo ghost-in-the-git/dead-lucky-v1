@@ -134,6 +134,11 @@ body {
     text-decoration: none;
 }
 
+/* Main Content */
+main {
+    padding-top: 88px; /* header (~60px) + ticker (~28px) */
+}
+
 /* Hero Section */
 .hero {
     min-height: 60vh;
@@ -157,10 +162,15 @@ body {
 }
 
 .hero-ticker {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
     width: 100%;
     overflow: hidden;
     background: var(--color-bg-primary);
     padding: 8px 0;
+    z-index: 999;
 }
 
 .hero-ticker span {
