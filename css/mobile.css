@@ -121,7 +121,6 @@ body {
     align-items: center;
     position: relative;
     padding-top: 60px;
-    padding-bottom: 40px;
 }
 
 .hero-video {
@@ -136,7 +135,7 @@ body {
 
 .hero-content {
     text-align: center;
-    padding: var(--spacing-xl) 0;
+    padding: 0;
 }
 
 .hero-logo-gif {
