@@ -282,7 +282,7 @@ main {
     color: #888;
     letter-spacing: 0.1em;
     white-space: nowrap;
-    animation: tickerScroll 15s linear infinite;
+    animation: tickerScroll 90s linear infinite;
 }
 
 @keyframes tickerScroll {
