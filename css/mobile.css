@@ -104,10 +104,10 @@ body {
 }
 
 .btn-social {
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
     padding: 0;
-    background: var(--color-bg-card);
+    background: transparent;
     color: var(--color-text-primary);
     border-radius: 50%;
 }
