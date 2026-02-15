@@ -390,7 +390,7 @@ main {
     padding: var(--spacing-2xl) 0;
     position: relative;
     overflow: hidden;
-    background-image: url('../images/WEB_NEW_BACKGROUND_V2.png');
+    background-image: url('../images/LARGE_BG.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
