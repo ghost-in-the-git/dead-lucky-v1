@@ -256,13 +256,9 @@ img {
 }
 
 .hero-ticker {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     overflow: hidden;
-    background: transparent;
-    z-index: 10;
+    background: var(--color-bg-primary);
     padding: 8px 0;
 }
 
