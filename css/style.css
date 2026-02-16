@@ -268,7 +268,6 @@ main {
     width: 100%;
     overflow: hidden;
     background: #ff4757;
-    padding: 8px 0;
     z-index: 999;
     white-space: nowrap;
     display: flex;
