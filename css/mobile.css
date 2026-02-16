@@ -420,6 +420,11 @@ main {
     font-size: 1.25rem;
 }
 
+.play-now-image {
+    max-width: 280px;
+    height: auto;
+}
+
 /* Social Section */
 .social-section {
     padding: var(--spacing-xl) 0;
