@@ -135,7 +135,7 @@ body {
 
 /* Main Content */
 main {
-    padding-top: 90px; /* header (~70px) + ticker (~20px) */
+    padding-top: 88px; /* header (~60px) + ticker (~28px) */
 }
 
 /* Hero Section */
@@ -162,16 +162,15 @@ main {
 
 .hero-ticker {
     position: fixed;
-    top: 70px;
+    top: 60px;
     left: 0;
     right: 0;
     width: 100%;
     overflow: hidden;
     background: #ff4757;
+    padding: 8px 0;
     z-index: 999;
     white-space: nowrap;
-    display: flex;
-    align-items: center;
 }
 
 .hero-ticker span {
