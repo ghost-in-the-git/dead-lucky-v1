@@ -157,6 +157,29 @@
         </div>
     </footer>
 
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+
+            var subjectText = document.getElementById('subject').options[document.getElementById('subject').selectedIndex].text;
+
+            var mailtoSubject = 'Dead Lucky - ' + subjectText;
+            var mailtoBody = 'Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message;
+
+            var mailtoLink = 'mailto:support@deadfellaz.io?subject=' + encodeURIComponent(mailtoSubject) + '&body=' + encodeURIComponent(mailtoBody);
+
+            window.location.href = mailtoLink;
+
+            // Show success message
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+        });
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
