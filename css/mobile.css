@@ -135,7 +135,7 @@ body {
 
 /* Main Content */
 main {
-    padding-top: 84px; /* header (~64px) + ticker (~20px) */
+    padding-top: 90px; /* header (~70px) + ticker (~20px) */
 }
 
 /* Hero Section */
@@ -162,7 +162,7 @@ main {
 
 .hero-ticker {
     position: fixed;
-    top: 64px;
+    top: 70px;
     left: 0;
     right: 0;
     width: 100%;
