@@ -208,8 +208,11 @@
 
     <script src="js/main.js"></script>
     <script>
-        // Redirect to desktop if screen is larger than 1000px
-        if (window.innerWidth > 1000) {
+        // If password reset link landed on mobile page, send to reset page with hash
+        var hash = window.location.hash ? window.location.hash.slice(1) : '';
+        if (hash && new URLSearchParams(hash).get('type') === 'recovery') {
+            window.location.replace('passwordReset.html' + window.location.hash);
+        } else if (window.innerWidth > 1000) {
             window.location.href = 'index.html';
         }
     </script>

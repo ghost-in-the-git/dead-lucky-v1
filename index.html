@@ -219,13 +219,11 @@
 
     <script src="js/main.js"></script>
     <script>
-        // If password reset link landed on homepage, send to reset page with hash
+        // If password reset link landed on homepage, send to reset page with hash (skip mobile redirect)
         var hash = window.location.hash ? window.location.hash.slice(1) : '';
         if (hash && new URLSearchParams(hash).get('type') === 'recovery') {
             window.location.replace('passwordReset.html' + window.location.hash);
-        }
-        // Redirect to mobile if screen is 1000px or smaller
-        if (window.innerWidth <= 1000) {
+        } else if (window.innerWidth <= 1000) {
             window.location.href = 'mobile.html';
         }
     </script>
