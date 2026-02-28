@@ -21,6 +21,7 @@
     --color-tiktok: #ff0050;
     --color-twitter: #1da1f2;
     --color-discord: #5865f2;
+    --color-pump: #14f195;
 
     --color-rarity-common: #8b8b8b;
     --color-rarity-rare: #4da6ff;
@@ -181,6 +182,11 @@ img {
 .btn-discord:hover {
     background: var(--color-discord);
     border-color: var(--color-discord);
+}
+
+.btn-pump:hover {
+    background: var(--color-pump);
+    border-color: var(--color-pump);
 }
 
 .btn-primary {
